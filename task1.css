@@ -1,0 +1,90 @@
+
+body {
+    background: var(--mint);
+}
+
+.ticket-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-card {
+    border: 1px solid rgba(15, 107, 95, 0.08);
+}
+
+.trip-switch {
+    display: inline-flex;
+    padding: 3px;
+    border: 1px solid #B7CEC7;
+    border-radius: 999px;
+}
+
+.trip-switch .btn {
+    border: 0;
+    border-radius: 999px;
+    padding: 0.55rem 1rem;
+    font-size: 0.78rem;
+    color: var(--green);
+}
+
+.trip-switch .btn-check:checked + .btn {
+    background: var(--green);
+    color: white;
+}
+
+.class-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.btn-clear,
+.btn-find {
+    min-width: 105px;
+    border-radius: 999px;
+    padding: 0.7rem 1.3rem;
+    font-weight: 700;
+}
+
+.btn-clear {
+    background: white;
+    border: 1px solid #9AADA7;
+    color: var(--ink);
+}
+
+.btn-find {
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    color: var(--ink);
+}
+
+.btn-find:hover {
+    background: #E39A23;
+    border-color: #E39A23;
+}
+
+@media (max-width: 575.98px) {
+    .ticket-wrap {
+        align-items: flex-start;
+        padding-top: 1rem !important;
+    }
+
+    .ticket-form {
+        padding: 16px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+}

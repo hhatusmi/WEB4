@@ -1,0 +1,142 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #0F6B5F;
+    --gold: #F2A93B;
+    --ink: #16302B;
+    --paper: #F4F7F5;
+    --mint: #E6EFEC;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Montserrat", sans-serif;
+}
+
+.ticket-wrap {
+    min-height: 100vh;
+}
+
+.ticket-card,
+.simple-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 16px 42px rgba(22, 48, 43, 0.14);
+}
+
+.ticket-card {
+    max-width: 1000px;
+}
+
+.ticket-header {
+    background: var(--green);
+    color: white;
+    padding: 20px 28px;
+}
+
+.ticket-header h1 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2vw, 1.65rem);
+    font-weight: 800;
+}
+
+.ticket-form {
+    padding: 28px;
+}
+
+.form-label,
+legend {
+    color: var(--ink);
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+    min-height: 44px;
+    border-color: #D9E5E0;
+    background-color: #F7FAF8;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.input-group .input-group-text {
+    color: white;
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 0.2rem rgba(15, 107, 95, 0.15);
+}
+
+.form-check-input:checked {
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.btn-brand {
+    color: white;
+    background: var(--green);
+    border-color: var(--green);
+    border-radius: 999px;
+    font-weight: 700;
+    padding: 0.75rem 1.2rem;
+}
+
+.btn-brand:hover {
+    color: white;
+    background: var(--ink);
+}
+
+.simple-card {
+    max-width: 720px;
+    padding: clamp(20px, 4vw, 36px);
+}
+
+.simple-card h1 {
+    color: var(--green);
+    font-weight: 800;
+}
+
+.invalid-feedback {
+    font-size: 0.8rem;
+}
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border-color: #C0392B;
+}
+
+input:user-invalid ~ .invalid-feedback,
+select:user-invalid ~ .invalid-feedback,
+textarea:user-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+input:user-valid,
+select:user-valid,
+textarea:user-valid {
+    border-color: var(--green);
+}
+
+@media (max-width: 575.98px) {
+    .ticket-form {
+        padding: 18px;
+    }
+
+    .ticket-header {
+        padding: 16px 18px;
+    }
+}
